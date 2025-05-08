@@ -1,19 +1,35 @@
 function createAdminMenu(){
-    const ProductRoute = "./admin/Products/index.html";
-    const cateoryRoute = "./admin/Categorias/index.html";
-    const isRouteActive = (route) =>{
+    const ProductRoute = "Products";
+    const cateoryRoute = "Categorias";
+
+    const isRouteActive = (routeName) =>{
+        const availableRoutes = {
+            Products: [
+                "/admin/Products/index.html",
+                "/admin/Products/create.html",
+                "/admin/Products/edit.html"
+            ],
+            Categorias: [
+                ,
+                "/admin/Categorias/create.html",
+                "/admin/Categorias/edit.html"
+            ]
+        };
         const currenRoute = window.location.pathname;
-        return route === currenRoute;
-    }
+        //return route === currenRoute;
+        return availableRoutes[routeName].includes(currenRoute)
+    };
+
+
     const routes = [
         {
             name: "Products",
-            path: ProductRoute, 
+            path: "/admin/Products/index.html", 
             isActive: isRouteActive(ProductRoute)
         },
         {
             name:"Categorias",
-            path:cateoryRoute, 
+            path:"/admin/Categorias/index.html", 
             isActive: isRouteActive(cateoryRoute),
         },
     ];

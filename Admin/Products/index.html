@@ -21,7 +21,69 @@
    </div>
     </div class="admin-main-container">
           Lista de Productos
-          <button type="button" onclick="redirectToCreateProduct(event)">Crear Productos</button>
+          <button type="button" onclick="redirectToCreateProduct(event)
+          ">Crear Productos</button>
+          <div class="table-container"></div>
+          <table> 
+            <thead> 
+              <tr> 
+                <th>Nombre</th>
+                <th>Cantidad Existente</th>
+                <th>Precio</th>
+                <th>Acciones</th>
+                <th>Categorias</th>
+              </tr>
+            </thead>
+            <tbody>
+
+               <tr> 
+
+                <td>products 1 </td>
+                <td>Categoria 1 </td>
+                <td>$650.00</td>
+                <td>
+                    <button 
+                      type= "button"
+                      onclick= "redirectToEditProduct(event, 1)"
+                      >
+                      Editar
+                    </button>
+                    <button 
+                     type="button" 
+                     onclick="deleteProduct(event, 1)"
+                     >
+                     Eliminar
+                    </button>
+
+                </td>
+
+               </tr>
+               <tr> 
+
+                <td>products 2</td>
+                <td>Categoria 2</td>
+                <td>$360.00</td>
+                <td>
+                    <button 
+                    type= "button"
+                    onclick= "redirectToEditProduct(event, 2)"
+                    >
+                    Editar
+                  </button>
+                  <button 
+                  type="button" 
+                  onclick="deleteProduct(event, 2)"
+                  >
+                  Eliminar
+                  </button>
+
+                </td>
+
+               </tr>
+
+            </tbody>            
+          </table>
+        </div>
    </div>
 </div>
     <script src="../admin.js"></script>
