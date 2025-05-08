@@ -1,23 +1,196 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio</title>
-</head>
-<body>
-    <ul>
-        <li>
-            <a href="./Admin/Products/index.html">Products</a>
-        </li><li>
-            <a href="./Admin/Products/create.html">Crear producto</a>
-        </li>
-        <li>
-            <a href="./Admin/Categorias/index.html">Categorias</a>
-        </li>
-        <li>
-            <a href="./Admin/Categorias/create.html">Crear Categorias</a>
-        </li>
-    </ul>
-</body>
+<html lang="es">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+        /* Aplica a todo el contenedor */
+body, 
+    
+    .main-container {
+    font-family: "Roboto", sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    width: 800px;
+    height: 500px;
+    border: 2px gray;
+    justify-content: center; /* Alinea el sidebar a la derecha */
+}
+
+/* Sidebar */
+.sidebar {
+    font-family: "Roboto", sans-serif;
+    width: 300px; /* Ancho del sidebar */
+    background-color: #d3d3d3; /* Color de fondo del sidebar */
+    color: #fff; /* Color del texto */
+    height:500px;/* Asegura que el sidebar ocupe toda la altura de la página */
+    position: fixed; 
+    top: 13%;
+    left: 40%;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+
+/* Estilos para los botones del sidebar */
+.sidebar button {
+    font-family: "Roboto", sans-serif;
+    background-color: #0e107e; /* Azul sólido */
+    color: white;
+    border: none;
+    padding: 20px;
+    margin: 10px 0;
+    width: 200px;
+    left: -20%;
+    right: 18%;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.sidebar button:hover {
+    background-color: #ffffff;
+    color:#200c5b;
+    border: 2px solid #200c5b
+}
+
+.sidebar-profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.sidebar-profile-info {
+    margin-left: 30px;
+    color:#0e107e;
+    font-size: 20px;
+}
+
+
+
+.sidebar-profile i, .sidebar button i {
+    margin-right: 6px;
+}
+
+.Perfil {
+      background-color: white;
+      padding:27px;
+      text-align: justify ;
+      width: 800px;
+      height: 440px;
+      margin-left: 20%;
+      margin-right: 2%;
+      margin-top: 23%;
+    }
+
+    .avatar {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background-color: #ccc;
+      margin-left: 20%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 40px;
+      color: white;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: #000000;
+    }
+
+    input {
+      margin: 5px 0;
+      color: #0b0000;
+    }
+
+    .btn {
+      top: 40%;
+      padding: 10px 20px;
+      background-color: #3f51b5;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      background-color: #303f9f;
+    }
+
+    .main-container h2{
+        text-align: center;
+        margin-right: 35%;
+    }
+
+    .main-container button {
+        margin-left: 10%;
+    }
+    .main-container buttonCerrar {
+        margin-left: 20%;
+        top: 130%
+    }
+
+    </style>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./admin.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Playwrite+CU&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <title>Plastic House</title>
+    </head>
+    
+    <body>
+        
+        <div class="main-container">
+
+            <div class="Perfil">
+                <div class="avatar">👤</div>
+                <h2>Vendedor</h2>
+                <div class = "Container-input">
+                  <p><strong>Nombre: </strong> <input type = "text" placeholder="Jahary Gutierrez"></p>  
+                <p><strong> ID Empleado: </strong><input type = "text" placeholder="1111"></p>
+                <buttonCerrar class="btn">Cerrar sesión</buttonCerrar>
+              </div>
+
+            <aside class="sidebar">
+                
+                <nav>
+                   
+                    <button id="btn-compras">
+                        <i ></i>COMPRAS
+                    </button>
+                    <button id="btn-sales">
+                        <i ></i>VENTAS
+                    </button>
+                    <button id="btn-suppliers">
+                        <i ></i>PROVEEDORES
+                    </button>
+                    <button id="btn-products" onclick="window.location.href='/admin/products/index.html'">
+                        <i ></i>PRODUCTOS
+                    </button>
+                    <button id="btn-clientes">
+                        <i></i>CLIENTE
+                    </button>
+                </nav>
+            </aside>
+            
+        </div>
+    </body>
 </html> 
