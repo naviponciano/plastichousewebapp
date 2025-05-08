@@ -6,6 +6,11 @@
     <title>Iniciar Sesión - Plastic House</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+        body.fade-out{
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+        
         body {
             font-family: "Roboto", sans-serif;
             display: flex;
@@ -121,16 +126,18 @@
             margin-left: 20%;
         }
 
-
+        
         
         
        
        
     </style>
+
+    
 </head>
 <body>
 
-    >
+    
     <div class="Login-container">
 
         <div class="Logo-form">
@@ -152,22 +159,18 @@
                 <div class = "Container-input">
                     <input type = "text" placeholder="Id Empleado">
                 <div class = "Container-input">
-                    <input type = "password" placeholder="Clave">
+                    <input type = "password" placeholder="Clave">  
                 </div>
-                <button id = "Btn"> Ir </button> 
+                <button onclick="desvanecerYRedirigir()"> Ir </button>
+            </div>
                 
-            
-                </div>
             </form>
             
             </form>
         </div>
      
     </form>
-
-    
-     
-
     <script src="./login.js"></script>
 </body>
+
 </html>
