@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión - Plastic House</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+        body {
+            font-family: "Roboto", sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid blue;
+            width: 100%;
+            height: 100vh;
+            background-color: #ffffff;
+            
+        }
+        
+        .Logo-form{
+            width: 100%;
+            background-color: #100586;
+            border-radius: 0% 90% 90% 0% ;
+            margin-top: 5%;
+            margin-bottom: 5%;
+
+        }
+
+        .Logo-form img{
+            width: 300px;
+            height: 300px;
+            border-radius: 60%;
+            margin-top: 13%;
+           margin-left: 10%;
+        }
+
+        .Login-container {
+           border: 1px solid grey;
+           background-color: rgb(230, 232, 234);
+           width: 800px;
+           height: 500px;
+           display: flex;
+           flex-direction: row;
+           
+        }
+         
+        .Login-form{
+            border: none;
+            width: 100%;
+        }
+
+        .Inicio-form{
+            border: 2px solid black;
+            width: 100%;
+        }
+        
+
+       
+        
+
+        .Login-form form {
+           
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+
+        .Login-container h1 {
+            font-size: 35px;
+            margin-bottom: -15px ; 
+            justify-content: center;
+            color:#100586;
+
+        }
+        .Login-container h2 {
+            font-size: 20px;
+            margin-top: 0 px;
+            margin-bottom: 20px; 
+            justify-content: center;
+
+        }
+
+        .Login-container span {
+            font-size: 12px;
+            margin-bottom: 15px;
+
+        }
+
+       
+       
+        input[type="text"],
+        input[type="password"] {
+           border: none;
+            width: 300px;
+            height: 40px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: center;
+            text-align:center;
+            align-items: center;
+            padding: 0 15px;
+            background-color: #ffffff;
+        }
+
+        button {
+            background-color: #100586;
+            color: white;
+            width: 170px;
+            height: 45px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer; 
+            font-size: 15px;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+            margin-left: 20%;
+        }
+
+
+        
+        
+       
+       
+    </style>
+</head>
+<body>
+
+    >
+    <div class="Login-container">
+
+        <div class="Logo-form">
+            <form class = "Iniciar-Sesión">
+                <h2>  </h2>
+                <img src = "../..\Logo\LOGO.jpg" 
+                alt = "Logo">
+                
+            </form>
+            
+            </form>
+        </div>
+        
+        <div class="Login-form">
+            <form class = "Iniciar-Sesión">
+                <h1>Plastic House</h1>
+                <h2> Iniciar Sesión</h2>
+                <span> Ingrese su ID de Empleado y su Clave </span>
+                <div class = "Container-input">
+                    <input type = "text" placeholder="Id Empleado">
+                <div class = "Container-input">
+                    <input type = "password" placeholder="Clave">
+                </div>
+                <button id = "Btn"> Ir </button> 
+                
+            
+                </div>
+            </form>
+            
+            </form>
+        </div>
+     
+    </form>
+
+    
+     
+
+    <script src="./login.js"></script>
+</body>
+</html>
