@@ -4,9 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="../../auth.js"></script>
+    <link rel="stylesheet" href="./admin.css">
     <title>Productos</title>
 </head>
 <body>
-    Lista de Productos
+    <div class="admin-container">
+    </div class="admin-header">
+          Header
+   </div>
+    </div class="admin-sidebar">
+          <ul id="admin-sidebar-menu">
+        </ul>
+          .<div class="logout-container">
+            <button type ="button">Cerrar Sesion</button>
+          </div>
+   </div>
+    </div class="admin-main-container">
+          Lista de Productos
+          <button type="button" onclick="redirectToCreateProduct(event)">Crear Productos</button>
+   </div>
+</div>
+    <script src="../admin.js"></script>
+    <script src="./products.js"></script>
 </body>
 </html>
